@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: source
-        run: . ursa-wrapper-go.sh
+        run: echo "::set-env name=CGO_CFLAGS::-I./include"
 
       - name: Test
         run: make unit-test
