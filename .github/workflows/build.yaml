@@ -22,8 +22,8 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
 
-      - name: CGO_CFLAGS
-        run: export CGO_CFLAGS=-I"${URSA_GO_ROOT}"/include
+      - name: source
+        run: . ursa-wrapper-go.sh
 
       - name: Test
         run: make unit-test
