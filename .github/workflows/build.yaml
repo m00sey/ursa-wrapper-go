@@ -22,9 +22,6 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
 
-      - name: source
-        run: echo "::set-env name=CGO_CFLAGS::-I./include"
-
       - name: Test
         run: make unit-test
 

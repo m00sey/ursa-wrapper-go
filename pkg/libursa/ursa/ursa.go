@@ -1,7 +1,7 @@
 package ursa
 
 /*
-   #cgo LDFLAGS: -lursa
+   #cgo LDFLAGS: -L${SRCDIR}/libs -lursa
    #include "ursa_cl.h"
    #include <stdlib.h>
 */
