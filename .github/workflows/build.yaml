@@ -21,7 +21,7 @@ jobs:
 
     - name: Add Ursa version ${{ matrix.ursa-version }}
       run: |
-        cp ${{ GITHUB_WORKSPACE }}/test-libs/ursa_${{ matrix.ursa-version }}-1_amd64.deb}} /tmp
+        cp ./test-libs/ursa_${{ matrix.ursa-version }}-1_amd64.deb}} /tmp
         dpkg -i /tmp/ursa_${{ matrix.ursa-version }}-1_amd64.deb
 
     - name: Test
