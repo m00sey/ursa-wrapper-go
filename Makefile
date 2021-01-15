@@ -1,10 +1,6 @@
-.PHONY= all
+.PHONY: all
+all: test
 
-all: unit-test cover
-
-unit-test:
+.PHONY: test
+test:
 	@scripts/test.sh
-
-cover:
-	go test -coverprofile cover.out ./pkg/...
-	go tool cover -html=cover.out
