@@ -4,7 +4,7 @@ on: [ push, pull_request ]
 jobs:
   test-0-3-2:
     name: Test using Ursa 0.3.2
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     container: m00sey/ursa_0.3.2:latest
     strategy:
       matrix:
@@ -22,10 +22,10 @@ jobs:
     - name: Test using Ursa ${{ matrix.ursa-version }}
       run: |
         make test
-        
+
   test-0-3-4:
     name: Test using Ursa 0.3.4
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     container: m00sey/ursa_0.3.4:latest
     strategy:
       matrix:
